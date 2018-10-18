@@ -8,7 +8,7 @@ router.get('/:id', function(req, res, next) {
     // you can change loginUrl to connect to sandbox or prerelease env.
     loginUrl : 'https://gatesair--gdata.cs94.my.salesforce.com'
   });
-  conn.login('shadab.k@cs.gair.com.gdata', 'Zeba@123', function(err, userInfo) {
+  conn.login('shadab.k@cs.gair.com.gdata', 'Zeba@1233RKDBzi2yoHu86KuWnhYJVFmJ', function(err, userInfo) {
     if (err) { return console.error(err); }
 
     var x=data("select id,name,SBQQ__Group__c,SBQQ__UnitCost__c,SBQQ__Product__r.productcode,Warranty_Cost_Incremental_Rate__c,SBQQ__ListPrice__c from SBQQ__QuoteLine__c where SBQQ__Quote__c ='"+id+"' and SBQQ__ProductFamily__c='Bundles'");
