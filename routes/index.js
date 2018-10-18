@@ -78,7 +78,7 @@ for(z of values[2].records)
    if(z.SBQQ__AdditionalDiscount__c!=null){
         nprice =lprice - z.SBQQ__AdditionalDiscount__c;}
 
-       conn.sobject('SBQQ__QuoteLine__c')
+    /*   conn.sobject('SBQQ__QuoteLine__c')
         .find({ 'Id' : z.Id })
         .update({'SBQQ__UnitCost__c': cal }, function(err, rets) {
           if (err) { return console.log(err); }
@@ -95,9 +95,9 @@ for(z of values[2].records)
         .update({SBQQ__NetPrice__c:nprice}, function(err, rets) {
           if (err) { return console.log(err); }
           console.log(rets);
-        });
+        });*/
 
-    /*    var body ={id:z.Id,ucost:cal,listprice:lprice,netprice:nprice};
+      var body ={id:z.Id,ucost:cal,listprice:lprice,netprice:nprice};
         conn.apex.put('/rest-test',body )
         .then(results => {
             console.log('Results', results);
@@ -107,7 +107,7 @@ for(z of values[2].records)
             console.error('Error', err);
            // resolve(); // resolving so entire process does not halt
         })
-*/
+
 
 
 
